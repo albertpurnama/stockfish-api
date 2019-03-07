@@ -26,3 +26,5 @@ def getNextMove():
   
   engine.quit()
   return result.move.uci()
+
+app.run()
