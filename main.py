@@ -27,5 +27,5 @@ def getNextMove():
   engine.quit()
   return result.move.uci()
 
-if __name__ = '__main__':
+if __name__ == '__main__':
   app.run()
