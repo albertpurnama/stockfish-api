@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stockfish
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stockfish
+  template:
+    metadata:
+      labels:
+        app: stockfish
+    spec:
+      containers:
+      - name: stockfish
+        image: albertputrapurnama/chess-be:0.0.1
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 8000
